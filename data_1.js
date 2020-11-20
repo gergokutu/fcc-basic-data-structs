@@ -77,3 +77,13 @@ console.log("Should be 'Learning to code is fun' >",
     .replace(/(^\w)/, match => match.toUpperCase()) + "!"
 );
 
+// Check the presence with indexOf
+function quickCheck(arr, elem) {
+  return arr.indexOf(elem) === -1 ?
+    false :
+    true;
+}
+console.log("Should be false >",
+  quickCheck(['squash', 'onions', 'shallots'], 'mushrooms')
+);
+
