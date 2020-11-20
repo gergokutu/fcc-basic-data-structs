@@ -23,8 +23,20 @@ function popShift(arr) {
 }
 console.log(popShift(['challenge', 'is', 'not', 'complete']));
 
-// splice() > it has 3 params
+// splice() for remove
 const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 const removed = arr.splice(1, 4);
 console.log("Sum should be 10 >", arr.reduce((acc, curr) => acc + curr, 0));
 console.log("Removed >", removed);
+
+// splice() for add
+// It has more params than 2...
+function htmlColorNames(arr) {
+  const startIndex = 0;
+  const amountToDelete = 2;
+
+  arr.splice(startIndex, amountToDelete, 'DarkSalmon', 'BlanchedAlmond');
+
+  return arr;
+}
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
