@@ -63,3 +63,17 @@ function copyMachine(arr, num) {
   return newArr;
 }
 console.log("Result:", copyMachine([true, false, true], 2));
+
+// Combine arrays with the spread operator
+function spreadOut() {
+  let fragment = ["to", "code"];
+  let sentence = ["learning", ...fragment, "is", "fun"];
+  return sentence;
+}
+// And use replace to make the first letter to uppercase
+console.log("Should be 'Learning to code is fun' >",
+  spreadOut()
+    .join(" ")
+    .replace(/(^\w)/, match => match.toUpperCase()) + "!"
+);
+
