@@ -47,4 +47,19 @@ console.log(htmlColorNames(
 function forecast(arr) {
   return arr.slice(2, 4);
 }
-console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+console.log("Should be [ 'warm', 'sunny' ] >",
+  forecast(
+    ['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']
+  )
+);
+
+// Copy an array with the spread operator
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    newArr.push([...arr]);
+    num--;
+  }
+  return newArr;
+}
+console.log("Result:", copyMachine([true, false, true], 2));
