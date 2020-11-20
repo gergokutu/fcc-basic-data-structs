@@ -38,3 +38,19 @@ console.log('userActivity object:', userActivity);
   };
   console.log('Apples should be 25 >', checkInventory("apples"));
 }
+
+// Remove object props > delete keyword
+{
+  let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+  };
+
+  const foodsToRemove = ['oranges', 'plums', 'strawberries'];
+  foodsToRemove.map(item => delete foods[item]);
+  console.log('Just apples, bananas and grapes >', foods);
+}
