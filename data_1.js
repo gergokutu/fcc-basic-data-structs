@@ -89,6 +89,7 @@ console.log("Should be false >",
 
 // If the subarray contains the passed element
 // Remove the subarray from the array
+// Use for loop!
 function filteredArray(arr, elem) {
   let newArr = [];
 
