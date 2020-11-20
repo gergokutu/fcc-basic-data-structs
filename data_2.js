@@ -86,3 +86,30 @@ function isEveryoneHere(obj) {
   return true;
 };
 console.log('Should be true >', isEveryoneHere(users));
+
+// Iterate over object properties > for...in
+{
+  const countOnline = usersObj => {
+    console.log(usersObj)
+    let numOfOnlineUsers = 0;
+    for (let user in usersObj) {
+      // Use bracket notation > dynamic prop names!!!
+      if (usersObj[user].online) numOfOnlineUsers++;
+    }
+    return numOfOnlineUsers;
+  };
+
+  const users = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  };
+
+  console.log('Should be 1 >', countOnline(users));
+}
