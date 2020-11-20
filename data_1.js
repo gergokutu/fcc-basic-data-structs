@@ -22,3 +22,9 @@ function popShift(arr) {
   return [shifted, popped];
 }
 console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+// splice() > it has 3 params
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+const removed = arr.splice(1, 4);
+console.log("Sum should be 10 >", arr.reduce((acc, curr) => acc + curr, 0));
+console.log("Removed >", removed);
