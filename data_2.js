@@ -115,6 +115,7 @@ console.log('Should be true >', isEveryoneHere(users));
 }
 
 // Generate an array of all object keys
+// There are also > Object.values, Object.entries...
 {
   let users = {
     Alan: {
@@ -142,4 +143,33 @@ console.log('Should be true >', isEveryoneHere(users));
   console.log('Should be [ "Alan", "Jeff", "Sarah", "Ryan" ] >',
     getArrayOfUsers(users)
   );
+}
+
+{
+  let user = {
+    name: 'Kenneth',
+    age: 28,
+    data: {
+      username: 'kennethCodesAllDay',
+      joinDate: 'March 26, 2016',
+      organization: 'freeCodeCamp',
+      friends: [
+        'Sam',
+        'Kira',
+        'Tomo'
+      ],
+      location: {
+        city: 'San Francisco',
+        state: 'CA',
+        country: 'USA'
+      }
+    }
+  };
+
+  function addFriend(userObj, friend) {
+    userObj.data.friends.push(friend);
+    return userObj.data.friends;
+  };
+
+  console.log('Should be [ "Sam", "Kira", "Tomo", "Pete" ] >', addFriend(user, 'Pete'));
 }
